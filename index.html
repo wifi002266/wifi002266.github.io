@@ -17,8 +17,8 @@
         }
 
         body {
-            /* Sötétített Minecraft háttér a szélekre */
-            background: linear-gradient(rgba(47, 49, 54, 0.85), rgba(47, 49, 54, 0.85)), url('spawn1.jpg.png') no-repeat center center fixed;
+            /* JAVÍTVA: Most már az új routersmp linkről húzza be a sötétített hátteret */
+            background: linear-gradient(rgba(47, 49, 54, 0.85), rgba(47, 49, 54, 0.85)), url('https://routersmp.github.io/spawn1.jpg.png') no-repeat center center fixed;
             background-size: cover;
             color: #dcdee1; 
             font-family: 'Poppins', sans-serif;
@@ -38,7 +38,6 @@
             margin: 0 auto 40px auto;
         }
 
-        /* Másolható IP doboz */
         .ip-box {
             border: 3px solid #991b1b;
             border-radius: 12px;
@@ -180,13 +179,13 @@
             font-weight: bold;
         }
 
-        /* SZABÁLYZATOK RENDERELES - EGY VONALBAN */
+        /* SZABÁLYZATOK RENDERELES */
         .rules-container {
             display: flex;
             gap: 25px;
             width: 100%;
             justify-content: center;
-            align-items: stretch; /* Egyforma magasság */
+            align-items: stretch;
         }
 
         .rules-card {
@@ -201,13 +200,11 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
         }
 
-        /* Helykitöltő a Discord oldalra, hogy egy vonalban kezdődjön a szöveg */
         .card-header-spacer {
             height: 90px;
             display: block;
         }
 
-        /* Router logó animációja */
         .card-logo {
             width: 80px;
             height: auto;
@@ -254,7 +251,7 @@
         }
 
         .signature {
-            margin-top: auto; /* Mindig teljesen az aljára tolja az aláírást */
+            margin-top: auto;
             padding-top: 20px;
             text-align: center;
             font-size: 13px;
