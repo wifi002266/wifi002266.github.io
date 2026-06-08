@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <style>
         * {
             box-sizing: border-box;
@@ -85,7 +87,6 @@
             color: #b9bbbe;
         }
 
-        /* KÉT KÁRTYA ELRENDEZÉSE EGYMÁS MELLETT */
         .rules-container {
             display: flex;
             gap: 30px;
@@ -103,6 +104,7 @@
             max-width: 500px;
             display: flex;
             flex-direction: column;
+            position: relative;
         }
 
         .rules-card h3 {
@@ -113,6 +115,21 @@
             padding-bottom: 8px;
             text-align: center;
             letter-spacing: 1px;
+        }
+
+        /* UGRÁLÓ ROUTER IKON KÓDJA */
+        .jumping-router {
+            font-size: 28px;
+            color: #991b1b;
+            text-align: center;
+            margin-bottom: 5px;
+            display: block;
+            animation: jump 0.6s infinite alternate; /* Ugráló animáció */
+        }
+
+        @keyframes jump {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-12px); } /* 12 pixelt ugrik fel */
         }
 
         .rules-card ul {
@@ -158,6 +175,15 @@
             border-radius: 15px;
             background-color: #202225;
             padding: 12px 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Távolság az ikon és a szöveg között */
+        }
+
+        /* Discord ikon stílusa */
+        .discord-box i {
+            color: #5865F2; /* Hivatalos Discord kék szín */
+            font-size: 20px;
         }
 
         .discord-box a {
@@ -176,7 +202,6 @@
             width: 260px;
         }
 
-        /* Mobil optimalizálás (ha telefonon nézik, egymás alá rakja a két kártyát) */
         @media (max-width: 900px) {
             body { padding: 20px; }
             header { flex-direction: column; align-items: center; gap: 20px; margin-bottom: 30px; }
@@ -184,68 +209,3 @@
             .rules-container { flex-direction: column; align-items: center; }
             .rules-card { width: 100%; }
             footer { justify-content: center; }
-            .main-title-box, .ip-box { width: 100%; text-align: center; }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="ip-box">ip:routersmp.play.hosting</div>
-        <div class="main-title-box">
-            <h1>üdvözlünk -routersmp-</h1>
-        </div>
-        <div class="spacer"></div>
-    </header>
-
-    <main>
-        <div class="server-desc">
-            <h2>Klasszikus Túlélő SMP</h2>
-            <p style="color: #ffffff; font-weight: bold;">Szerver férőhely: max 50 slot</p>
-        </div>
-
-        <div class="rules-container">
-            <div class="rules-card">
-                <h3>DISCORD SZABÁLYOK</h3>
-                <ul>
-                    <li>Ne káromkodj!</li>
-                    <li>Ne spammelj!</li>
-                    <li>Ne írj full CAPS LOCK-al!</li>
-                    <li>Ne kéregess rangokért!</li>
-                    <li>Ne küldj képeket/dolgokat!</li>
-                    <li>Csak magyarul/angolul írj!</li>
-                    <li>Ne hirdess!</li>
-                    <li>Ne élj vissza a rankoddal!</li>
-                </ul>
-                <div class="signature">-router smp vezetőség-</div>
-            </div>
-
-            <div class="rules-card">
-                <h3>MINECRAFT SZABÁLYOK</h3>
-                <ul>
-                    <li>Ne rombold szét a másik építményét!</li>
-                    <li>Ne káromkodj!</li>
-                    <li>Csak magyarul/angolul írj!</li>
-                    <li>Ne hirdess!</li>
-                    <li>Ne írj full CAPS LOCK-al!</li>
-                    <li>Ne élj vissza a rankoddal!</li>
-                    <li>Ne kéregess rangokért!</li>
-                    <li>Ne használj ki bug-okat vagy glitch-eket!</li>
-                    <li>Ne spammelj!</li>
-                    <li>Ne küldj dolgokat!</li>
-                    <li>Ne ölj meg embereket. (kivéve ha pvp-zel)</li>
-                    <li>Ne használj csaló klienseket!</li>
-                </ul>
-                <div class="signature">-router smp vezetőség-</div>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <div class="discord-box">
-            <a href="https://discord.gg/KyJ4k2SYC" target="_blank">discord:https://discord.gg/KyJ4k2SYC</a>
-        </div>
-    </footer>
-
-</body>
-</html>
