@@ -107,6 +107,20 @@
             position: relative;
         }
 
+        /* ROUTER LOGÓ STÍLUSA ÉS ANIMÁCIÓJA */
+        .card-logo {
+            width: 80px; /* A router mérete */
+            height: auto;
+            display: block;
+            margin: 0 auto 15px auto; /* Középre igazítás */
+            animation: jump 0.6s infinite alternate; /* Ugráló animáció */
+        }
+
+        @keyframes jump {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-15px); } /* 15 pixelt ugrik fel */
+        }
+
         .rules-card h3 {
             color: #ffffff;
             font-size: 22px;
@@ -115,21 +129,6 @@
             padding-bottom: 8px;
             text-align: center;
             letter-spacing: 1px;
-        }
-
-        /* UGRÁLÓ ROUTER IKON KÓDJA */
-        .jumping-router {
-            font-size: 28px;
-            color: #991b1b;
-            text-align: center;
-            margin-bottom: 5px;
-            display: block;
-            animation: jump 0.6s infinite alternate; /* Ugráló animáció */
-        }
-
-        @keyframes jump {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-12px); } /* 12 pixelt ugrik fel */
         }
 
         .rules-card ul {
@@ -231,6 +230,7 @@
 
         <div class="rules-container">
             <div class="rules-card">
+                <img src="image_3.png" alt="Router Logo" class="card-logo">
                 <h3>DISCORD SZABÁLYOK</h3>
                 <ul>
                     <li>Ne káromkodj!</li>
@@ -246,7 +246,8 @@
             </div>
 
             <div class="rules-card">
-                <i class="fa-solid fa-wifi jumping-router"></i> <h3>MINECRAFT SZABÁLYOK</h3>
+                <img src="image_3.png" alt="Router Logo" class="card-logo">
+                <h3>MINECRAFT SZABÁLYOK</h3>
                 <ul>
                     <li>Ne rombold szét a másik építményét!</li>
                     <li>Ne káromkodj!</li>
