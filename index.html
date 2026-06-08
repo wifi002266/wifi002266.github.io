@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Router SMP</title>
+    <title>Router SMP - Weboldal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
@@ -15,56 +15,53 @@
         }
 
         body {
-            background-color: #2f3136; /* Pontos Discord szürke háttér */
-            color: #dcdee1; /* Discord világosszürke szövegszín */
+            background-color: #2f3136; /* Discord sötétszürke háttér */
+            color: #dcdee1; /* Törtfehér szövegszín */
             font-family: 'Poppins', sans-serif;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
             padding: 40px;
-            overflow-x: hidden;
         }
 
-        /* FELSŐ RÉSZ: IP és Főcím */
+        /* FEJLÉC ELRENDEZÉSE */
         header {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
+            align-items: center;
             width: 100%;
             margin-bottom: 60px;
         }
 
-        /* IP cím doboza (Bal oldalt fent, vörös kerettel) */
+        /* Bal oldali IP doboz sötétvörös kerettel */
         .ip-box {
-            border: 3px solid #991b1b; /* Vastag vörös szegély */
-            border-radius: 15px; /* Lekerekített sarkok, mint a rajzodon */
-            padding: 15px 25px;
+            border: 3px solid #991b1b;
+            border-radius: 12px;
+            padding: 12px 20px;
             font-family: 'Share Tech Mono', monospace;
             font-size: 18px;
-            background-color: #202225; /* Sötétebb belső rész */
+            background-color: #202225;
             color: #dcdee1;
-            box-shadow: 0 0 15px rgba(153, 27, 27, 0.4); /* Enyhe vörös ragyogás */
         }
 
-        /* Üdvözlő főcím (Középen fent, nagy vörös kerettel) */
+        /* Középső főcím sötétvörös kerettel */
         .main-title-box {
-            border: 3px solid #991b1b; /* Vastag vörös szegély */
-            border-radius: 25px; /* Erősen lekerekített sarkok */
-            padding: 25px 60px;
+            border: 3px solid #991b1b;
+            border-radius: 20px;
+            padding: 20px 50px;
             background-color: #202225;
-            box-shadow: 0 0 20px rgba(153, 27, 27, 0.4);
             text-align: center;
         }
 
         .main-title-box h1 {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 700;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             color: #dcdee1;
             text-transform: lowercase;
         }
 
-        /* KÖZÉPSŐ RÉSZ: Tartalom */
+        /* KÖZÉPSŐ TARTALOM */
         main {
             flex-grow: 1;
             display: flex;
@@ -77,26 +74,26 @@
         }
 
         .server-desc h2 {
-            font-size: 36px;
+            font-size: 32px;
             color: #ffffff;
             margin-bottom: 15px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
 
         .server-desc p {
             font-size: 18px;
             line-height: 1.6;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             color: #b9bbbe;
         }
 
-        /* Szabályzat kártya */
+        /* Szabályzat doboz sötétvörös kiemeléssel */
         .rules-card {
             background-color: #23272a;
-            border: 2px solid #551010;
+            border: 2px solid #991b1b;
             border-radius: 12px;
             padding: 25px;
             width: 100%;
+            max-width: 500px;
             text-align: left;
         }
 
@@ -125,29 +122,3 @@
             color: #991b1b;
             font-weight: bold;
             position: absolute;
-            left: 0;
-        }
-
-        /* ALSÓ RÉSZ: Discord gomb vörös kerettel */
-        footer {
-            display: flex;
-            justify-content: flex-end;
-            width: 100%;
-            margin-top: auto;
-        }
-
-        .discord-btn-box {
-            border: 3px solid #991b1b; /* Vastag vörös szegély */
-            border-radius: 20px; /* Lekerekített sarkok */
-            background-color: #202225;
-            box-shadow: 0 0 15px rgba(153, 27, 27, 0.4);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        /* Amikor ráviszed az egeret, kicsit megmozdul */
-        .discord-btn-box:hover {
-            transform: scale(1.03);
-            box-shadow: 0 0 25px rgba(153, 27, 27, 0.7);
-        }
-
-        .discord-
