@@ -107,3 +107,145 @@
 
         .rules-card h3 {
             color: #ffffff;
+            font-size: 22px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #991b1b;
+            padding-bottom: 8px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .rules-card ul {
+            list-style: none;
+            flex-grow: 1;
+        }
+
+        .rules-card li {
+            font-size: 15px;
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 20px;
+            line-height: 1.4;
+        }
+
+        .rules-card li::before {
+            content: "•";
+            color: #991b1b;
+            font-weight: bold;
+            font-size: 18px;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        .signature {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 14px;
+            color: #72767d;
+            font-style: italic;
+        }
+
+        footer {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .discord-box {
+            border: 3px solid #991b1b;
+            border-radius: 15px;
+            background-color: #202225;
+            padding: 12px 25px;
+        }
+
+        .discord-box a {
+            color: #dcdee1;
+            text-decoration: none;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 16px;
+        }
+
+        .discord-box a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .spacer {
+            width: 260px;
+        }
+
+        /* Mobil optimalizálás (ha telefonon nézik, egymás alá rakja a két kártyát) */
+        @media (max-width: 900px) {
+            body { padding: 20px; }
+            header { flex-direction: column; align-items: center; gap: 20px; margin-bottom: 30px; }
+            .spacer { display: none; }
+            .rules-container { flex-direction: column; align-items: center; }
+            .rules-card { width: 100%; }
+            footer { justify-content: center; }
+            .main-title-box, .ip-box { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="ip-box">ip:routersmp.play.hosting</div>
+        <div class="main-title-box">
+            <h1>üdvözlünk -routersmp-</h1>
+        </div>
+        <div class="spacer"></div>
+    </header>
+
+    <main>
+        <div class="server-desc">
+            <h2>Klasszikus Túlélő SMP</h2>
+            <p style="color: #ffffff; font-weight: bold;">Szerver férőhely: max 50 slot</p>
+        </div>
+
+        <div class="rules-container">
+            <div class="rules-card">
+                <h3>DISCORD SZABÁLYOK</h3>
+                <ul>
+                    <li>Ne káromkodj!</li>
+                    <li>Ne spammelj!</li>
+                    <li>Ne írj full CAPS LOCK-al!</li>
+                    <li>Ne kéregess rangokért!</li>
+                    <li>Ne küldj képeket/dolgokat!</li>
+                    <li>Csak magyarul/angolul írj!</li>
+                    <li>Ne hirdess!</li>
+                    <li>Ne élj vissza a rankoddal!</li>
+                </ul>
+                <div class="signature">-router smp vezetőség-</div>
+            </div>
+
+            <div class="rules-card">
+                <h3>MINECRAFT SZABÁLYOK</h3>
+                <ul>
+                    <li>Ne rombold szét a másik építményét!</li>
+                    <li>Ne káromkodj!</li>
+                    <li>Csak magyarul/angolul írj!</li>
+                    <li>Ne hirdess!</li>
+                    <li>Ne írj full CAPS LOCK-al!</li>
+                    <li>Ne élj vissza a rankoddal!</li>
+                    <li>Ne kéregess rangokért!</li>
+                    <li>Ne használj ki bug-okat vagy glitch-eket!</li>
+                    <li>Ne spammelj!</li>
+                    <li>Ne küldj dolgokat!</li>
+                    <li>Ne ölj meg embereket. (kivéve ha pvp-zel)</li>
+                    <li>Ne használj csaló klienseket!</li>
+                </ul>
+                <div class="signature">-router smp vezetőség-</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="discord-box">
+            <a href="https://discord.gg/KyJ4k2SYC" target="_blank">discord:https://discord.gg/KyJ4k2SYC</a>
+        </div>
+    </footer>
+
+</body>
+</html>
