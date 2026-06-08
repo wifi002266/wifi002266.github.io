@@ -17,7 +17,6 @@
         }
 
         body {
-            /* Biztosra megyünk: a jelenlegi wifi002266 elérésről húzza be a sötétített hátteret, hogy működjön */
             background: linear-gradient(rgba(47, 49, 54, 0.85), rgba(47, 49, 54, 0.85)), url('https://wifi002266.github.io/spawn1.jpg.png') no-repeat center center fixed;
             background-size: cover;
             color: #dcdee1; 
@@ -134,4 +133,91 @@
             border: 3px solid #991b1b;
             border-radius: 15px;
             padding: 25px;
-            background-color: #232
+            background-color: #23272a;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .gallery-container h3 {
+            color: #ffffff;
+            font-size: 22px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #991b1b;
+            padding-bottom: 5px;
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            border: 2px solid #991b1b;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #202225;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-item p {
+            color: #dcdee1;
+            padding: 10px;
+            font-size: 14px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* SZABÁLYZATOK */
+        .rules-container {
+            display: flex;
+            gap: 25px;
+            width: 100%;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .rules-card {
+            background-color: #23272a;
+            border: 3px solid #991b1b;
+            border-radius: 15px;
+            padding: 30px;
+            flex: 1;
+            max-width: 480px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-header-spacer {
+            height: 90px;
+            display: block;
+        }
+
+        .card-logo {
+            width: 80px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px auto;
+            animation: jump 0.6s infinite alternate;
+        }
+
+        @keyframes jump {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-12px); }
+        }
+
+        .rules-card h3 {
+            color: #ffffff;
+            font-size: 22px;
+            margin-bottom: 20px;
