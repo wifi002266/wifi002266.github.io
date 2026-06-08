@@ -107,18 +107,19 @@
             position: relative;
         }
 
-        /* ROUTER LOGÓ STÍLUSA ÉS ANIMÁCIÓJA */
+        /* ROUTER KÉP ANIMÁCIÓJA ÉS BEÁLLÍTÁSA */
         .card-logo {
-            width: 80px; /* A router mérete */
+            width: 100px; /* Megfelelő méret a logónak */
             height: auto;
             display: block;
-            margin: 0 auto 15px auto; /* Középre igazítás */
-            animation: jump 0.6s infinite alternate; /* Ugráló animáció */
+            margin: 0 auto 15px auto;
+            background: transparent; /* Nincs háttér */
+            animation: jump 0.6s infinite alternate; /* Folyamatos ugrálás */
         }
 
         @keyframes jump {
             0% { transform: translateY(0); }
-            100% { transform: translateY(-15px); } /* 15 pixelt ugrik fel */
+            100% { transform: translateY(-15px); }
         }
 
         .rules-card h3 {
@@ -176,13 +177,12 @@
             padding: 12px 25px;
             display: flex;
             align-items: center;
-            gap: 10px; /* Távolság az ikon és a szöveg között */
+            gap: 12px;
         }
 
-        /* Discord ikon stílusa */
         .discord-box i {
-            color: #5865F2; /* Hivatalos Discord kék szín */
-            font-size: 20px;
+            color: #5865F2; /* Hivatalos Discord kék */
+            font-size: 22px;
         }
 
         .discord-box a {
@@ -230,7 +230,7 @@
 
         <div class="rules-container">
             <div class="rules-card">
-                <img src="image_3.png" alt="Router Logo" class="card-logo">
+                <img src="server-icon-removebg-preview.png" alt="Router" class="card-logo">
                 <h3>DISCORD SZABÁLYOK</h3>
                 <ul>
                     <li>Ne káromkodj!</li>
@@ -246,7 +246,7 @@
             </div>
 
             <div class="rules-card">
-                <img src="image_3.png" alt="Router Logo" class="card-logo">
+                <img src="server-icon-removebg-preview.png" alt="Router" class="card-logo">
                 <h3>MINECRAFT SZABÁLYOK</h3>
                 <ul>
                     <li>Ne rombold szét a másik építményét!</li>
@@ -269,7 +269,8 @@
 
     <footer>
         <div class="discord-box">
-            <i class="fa-brands fa-discord"></i> <a href="https://discord.gg/KyJ4k2SYC" target="_blank">discord:https://discord.gg/KyJ4k2SYC</a>
+            <i class="fa-brands fa-discord"></i>
+            <a href="https://discord.gg/KyJ4k2SYC" target="_blank">discord:https://discord.gg/KyJ4k2SYC</a>
         </div>
     </footer>
 
