@@ -18,26 +18,27 @@
 
         body {
             background-color: #2f3136; /* Discord sötétszürke */
-            color: #dcdee1; /* Törtfehér szöveg */
+            color: #dcdee1; /* Törtfehér */
             font-family: 'Poppins', sans-serif;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            padding: 40px;
+            padding: 30px;
         }
 
+        /* FEJLÉC SZTÁJL */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 100%;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
 
         .ip-box {
             border: 3px solid #991b1b;
             border-radius: 12px;
-            padding: 12px 20px;
+            padding: 10px 20px;
             font-family: 'Share Tech Mono', monospace;
             font-size: 18px;
             background-color: #202225;
@@ -47,7 +48,7 @@
         .main-title-box {
             border: 3px solid #991b1b;
             border-radius: 20px;
-            padding: 20px 50px;
+            padding: 15px 40px;
             background-color: #202225;
             text-align: center;
         }
@@ -60,26 +61,29 @@
             text-transform: lowercase;
         }
 
+        .spacer {
+            width: 260px;
+        }
+
+        /* TARTALOM */
         main {
-            flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            max-width: 1100px;
-            margin: 0 auto 40px auto;
+            max-width: 1000px;
+            margin: 0 auto;
             width: 100%;
+            gap: 30px; /* Egységes, nem túl nagy távolság a szekciók között */
         }
 
         .server-desc {
             text-align: center;
-            margin-bottom: 40px;
         }
 
         .server-desc h2 {
             font-size: 32px;
             color: #ffffff;
-            margin-bottom: 15px;
+            margin-bottom: 5px;
         }
 
         .server-desc p {
@@ -87,59 +91,100 @@
             color: #b9bbbe;
         }
 
+        /* GALÉRIA ELEMEI */
+        .gallery-container {
+            width: 100%;
+            border: 3px solid #991b1b;
+            border-radius: 15px;
+            padding: 20px;
+            background-color: #23272a;
+        }
+
+        .gallery-container h3 {
+            color: #ffffff;
+            font-size: 20px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #991b1b;
+            padding-bottom: 5px;
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .gallery-item {
+            border: 2px solid #991b1b;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #202225;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .gallery-item p {
+            color: #dcdee1;
+            padding: 8px;
+            font-size: 14px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* SZABÁLYZAT KÁRTYÁK */
         .rules-container {
             display: flex;
-            gap: 30px;
+            gap: 20px;
             width: 100%;
             justify-content: center;
-            align-items: stretch;
         }
 
         .rules-card {
             background-color: #23272a;
             border: 3px solid #991b1b;
             border-radius: 15px;
-            padding: 30px;
+            padding: 20px;
             flex: 1;
-            max-width: 500px;
+            max-width: 480px;
             display: flex;
             flex-direction: column;
-            position: relative;
         }
 
-        /* ROUTER KÉP ANIMÁCIÓJA ÉS BEÁLLÍTÁSA */
         .card-logo {
-            width: 100px; /* Megfelelő méret a logónak */
+            width: 70px;
             height: auto;
             display: block;
-            margin: 0 auto 15px auto;
-            background: transparent; /* Nincs háttér */
-            animation: jump 0.6s infinite alternate; /* Folyamatos ugrálás */
+            margin: 0 auto 10px auto;
+            animation: jump 0.6s infinite alternate;
         }
 
         @keyframes jump {
             0% { transform: translateY(0); }
-            100% { transform: translateY(-15px); }
+            100% { transform: translateY(-10px); }
         }
 
         .rules-card h3 {
             color: #ffffff;
-            font-size: 22px;
-            margin-bottom: 20px;
+            font-size: 20px;
+            margin-bottom: 15px;
             border-bottom: 2px solid #991b1b;
-            padding-bottom: 8px;
+            padding-bottom: 5px;
             text-align: center;
-            letter-spacing: 1px;
         }
 
         .rules-card ul {
             list-style: none;
-            flex-grow: 1;
         }
 
         .rules-card li {
-            font-size: 15px;
-            margin-bottom: 12px;
+            font-size: 14px;
+            margin-bottom: 8px;
             position: relative;
             padding-left: 20px;
             line-height: 1.4;
@@ -149,47 +194,49 @@
             content: "•";
             color: #991b1b;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 16px;
             position: absolute;
             left: 0;
             top: -2px;
         }
 
         .signature {
-            margin-top: 25px;
+            margin-top: auto;
+            padding-top: 15px;
             text-align: center;
-            font-size: 14px;
+            font-size: 13px;
             color: #72767d;
             font-style: italic;
         }
 
+        /* LÁBLÉC / DISCORD */
         footer {
             display: flex;
             justify-content: flex-end;
             width: 100%;
-            margin-top: auto;
+            margin-top: 30px;
         }
 
         .discord-box {
             border: 3px solid #991b1b;
-            border-radius: 15px;
+            border-radius: 12px;
             background-color: #202225;
-            padding: 12px 25px;
+            padding: 10px 20px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
         }
 
         .discord-box i {
-            color: #5865F2; /* Hivatalos Discord kék */
-            font-size: 22px;
+            color: #5865F2;
+            font-size: 20px;
         }
 
         .discord-box a {
             color: #dcdee1;
             text-decoration: none;
             font-family: 'Share Tech Mono', monospace;
-            font-size: 16px;
+            font-size: 15px;
         }
 
         .discord-box a:hover {
@@ -197,18 +244,15 @@
             text-decoration: underline;
         }
 
-        .spacer {
-            width: 260px;
-        }
-
-        @media (max-width: 900px) {
-            body { padding: 20px; }
-            header { flex-direction: column; align-items: center; gap: 20px; margin-bottom: 30px; }
+        /* MOBIL NÉZET */
+        @media (max-width: 800px) {
+            body { padding: 15px; }
+            header { flex-direction: column; gap: 15px; margin-bottom: 20px; }
             .spacer { display: none; }
+            .gallery-grid { grid-template-columns: 1fr; }
             .rules-container { flex-direction: column; align-items: center; }
             .rules-card { width: 100%; }
             footer { justify-content: center; }
-            .main-title-box, .ip-box { width: 100%; text-align: center; }
         }
     </style>
 </head>
@@ -226,6 +270,20 @@
         <div class="server-desc">
             <h2>Klasszikus Túlélő SMP</h2>
             <p style="color: #ffffff; font-weight: bold;">Szerver férőhely: max 50 slot</p>
+        </div>
+
+        <div class="gallery-container">
+            <h3>Szerver Spawn Galéria</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="spawn1.jpg" alt="Spawn 1">
+                    <p>Híd és a Kezdőhely</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="spawn2.jpg" alt="Spawn 2">
+                    <p>ROUTER SMP Felirat az égen</p>
+                </div>
+            </div>
         </div>
 
         <div class="rules-container">
