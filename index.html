@@ -35,6 +35,7 @@
             margin-bottom: 30px;
         }
 
+        /* Másolható IP doboz stílusa */
         .ip-box {
             border: 3px solid #991b1b;
             border-radius: 12px;
@@ -43,6 +44,42 @@
             font-size: 18px;
             background-color: #202225;
             color: #dcdee1;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .ip-box:hover {
+            background-color: #2f3136;
+            border-color: #ef4444;
+        }
+
+        .ip-box i {
+            margin-left: 10px;
+            font-size: 16px;
+            color: #991b1b;
+        }
+
+        /* Másolás értesítés */
+        .copy-tooltip {
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #10b981;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-family: 'Poppins', sans-serif;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+
+        .copy-tooltip.show {
+            opacity: 1;
         }
 
         .main-title-box {
@@ -62,7 +99,7 @@
         }
 
         .spacer {
-            width: 260px;
+            width: 290px;
         }
 
         /* TARTALOM */
@@ -136,13 +173,13 @@
             font-weight: bold;
         }
 
-        /* SZABÁLYZATOK */
+        /* SZABÁLYZATOK - EGY VONALBAN */
         .rules-container {
             display: flex;
             gap: 20px;
             width: 100%;
             justify-content: center;
-            align-items: stretch;
+            align-items: stretch; /* Biztosítja, hogy a két kártya magassága tökéletesen egyforma legyen */
         }
 
         .rules-card {
@@ -153,7 +190,13 @@
             flex: 1;
             max-width: 480px;
             display: flex;
-            flex-direction: column;
+            flex-direction: column; /* Egymás alá rendezi a kártya elemeit */
+        }
+
+        /* Helykitöltő a Discord szabályzathoz, hogy a címek is egy szinten kezdődjenek */
+        .card-header-spacer {
+            height: 90px; /* Pontosan akkora, mint a router logó és a margója együtt */
+            display: block;
         }
 
         /* Router logó animációja */
@@ -181,7 +224,7 @@
 
         .rules-card ul {
             list-style: none;
-            flex-grow: 1;
+            flex-grow: 1; /* Kitölti a helyet, így az aláírás teljesen az aljára tolódik */
         }
 
         .rules-card li {
@@ -203,7 +246,8 @@
         }
 
         .signature {
-            margin-top: 15px;
+            margin-top: auto; /* Mindig a kártya legalsó szélére igazítja az aláírást */
+            padding-top: 20px;
             text-align: center;
             font-size: 13px;
             color: #72767d;
@@ -249,6 +293,7 @@
             body { padding: 15px; }
             header { flex-direction: column; gap: 15px; margin-bottom: 20px; }
             .spacer { display: none; }
+            .card-header-spacer { display: none; }
             .gallery-grid { grid-template-columns: 1fr; }
             .rules-container { flex-direction: column; align-items: center; }
             .rules-card { width: 100%; }
@@ -259,7 +304,12 @@
 <body>
 
     <header>
-        <div class="ip-box">ip:routersmp.play.hosting</div>
+        <div class="ip-box" onclick="copyIP()">
+            <span>ip:routersmp.play.hosting</span>
+            <i class="fa-regular fa-copy"></i>
+            <div class="copy-tooltip" id="tooltip">Sikeresen másolva!</div>
+        </div>
+        
         <div class="main-title-box">
             <h1>üdvözlünk -routersmp-</h1>
         </div>
@@ -289,6 +339,7 @@
         <div class="rules-container">
             
             <div class="rules-card">
+                <div class="card-header-spacer"></div>
                 <h3>DISCORD SZABÁLYOK</h3>
                 <ul>
                     <li>Ne káromkodj!</li>
@@ -332,6 +383,19 @@
             <a href="https://discord.gg/KyJ4k2SYC" target="_blank">discord:https://discord.gg/KyJ4k2SYC</a>
         </div>
     </footer>
+
+    <script>
+        function copyIP() {
+            var ipText = "routersmp.play.hosting";
+            navigator.clipboard.writeText(ipText).then(function() {
+                var tooltip = document.getElementById("tooltip");
+                tooltip.classList.add("show");
+                setTimeout(function() {
+                    tooltip.classList.remove("show");
+                }, 2000);
+            });
+        }
+    </script>
 
 </body>
 </html>
