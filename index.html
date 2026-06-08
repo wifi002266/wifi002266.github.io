@@ -26,7 +26,7 @@
             padding: 30px;
         }
 
-        /* FEJLÉC SZTÁJL */
+        /* FEJLÉC */
         header {
             display: flex;
             justify-content: space-between;
@@ -73,7 +73,7 @@
             max-width: 1000px;
             margin: 0 auto;
             width: 100%;
-            gap: 30px; /* Egységes, nem túl nagy távolság a szekciók között */
+            gap: 25px;
         }
 
         .server-desc {
@@ -91,7 +91,7 @@
             color: #b9bbbe;
         }
 
-        /* GALÉRIA ELEMEI */
+        /* GALÉRIA */
         .gallery-container {
             width: 100%;
             border: 3px solid #991b1b;
@@ -126,7 +126,6 @@
             width: 100%;
             height: auto;
             display: block;
-            object-fit: cover;
         }
 
         .gallery-item p {
@@ -137,27 +136,29 @@
             font-weight: bold;
         }
 
-        /* SZABÁLYZAT KÁRTYÁK */
+        /* SZABÁLYZATOK */
         .rules-container {
             display: flex;
             gap: 20px;
             width: 100%;
             justify-content: center;
+            align-items: stretch;
         }
 
         .rules-card {
             background-color: #23272a;
             border: 3px solid #991b1b;
             border-radius: 15px;
-            padding: 20px;
+            padding: 25px;
             flex: 1;
             max-width: 480px;
             display: flex;
             flex-direction: column;
         }
 
+        /* Router logó animációja */
         .card-logo {
-            width: 70px;
+            width: 80px;
             height: auto;
             display: block;
             margin: 0 auto 10px auto;
@@ -166,7 +167,7 @@
 
         @keyframes jump {
             0% { transform: translateY(0); }
-            100% { transform: translateY(-10px); }
+            100% { transform: translateY(-12px); }
         }
 
         .rules-card h3 {
@@ -180,6 +181,7 @@
 
         .rules-card ul {
             list-style: none;
+            flex-grow: 1;
         }
 
         .rules-card li {
@@ -201,15 +203,14 @@
         }
 
         .signature {
-            margin-top: auto;
-            padding-top: 15px;
+            margin-top: 15px;
             text-align: center;
             font-size: 13px;
             color: #72767d;
             font-style: italic;
         }
 
-        /* LÁBLÉC / DISCORD */
+        /* LÁBLÉC */
         footer {
             display: flex;
             justify-content: flex-end;
@@ -244,7 +245,6 @@
             text-decoration: underline;
         }
 
-        /* MOBIL NÉZET */
         @media (max-width: 800px) {
             body { padding: 15px; }
             header { flex-direction: column; gap: 15px; margin-bottom: 20px; }
@@ -276,19 +276,19 @@
             <h3>Szerver Spawn Galéria</h3>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="spawn1.jpg" alt="Spawn 1">
+                    <img src="spawn1.jpg.png" alt="Spawn 1">
                     <p>Híd és a Kezdőhely</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="spawn2.jpg" alt="Spawn 2">
+                    <img src="spawn2.jpg.png" alt="Spawn 2">
                     <p>ROUTER SMP Felirat az égen</p>
                 </div>
             </div>
         </div>
 
         <div class="rules-container">
+            
             <div class="rules-card">
-                <img src="server-icon-removebg-preview.png" alt="Router" class="card-logo">
                 <h3>DISCORD SZABÁLYOK</h3>
                 <ul>
                     <li>Ne káromkodj!</li>
@@ -322,6 +322,7 @@
                 </ul>
                 <div class="signature">-router smp vezetőség-</div>
             </div>
+
         </div>
     </main>
 
